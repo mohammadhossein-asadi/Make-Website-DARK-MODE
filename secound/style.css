@@ -249,6 +249,45 @@ for extra large screens
     .play-btn,
     .main-link,
     .main-link span {
-        
+        position: relative;
     }
 }
+
+.text-left::before,
+.text-right::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 10em;
+    width: 35em;
+    z-index: 0;
+}
+
+.text-left::before {
+    background: var(--primary);
+    right: 50%;
+}
+
+.text-right::before {
+    background: var(--secoundary);
+    left: 30%;
+}
+
+.main-link::before {
+    content: "";
+    background: var(--accent);
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateY(-50%);
+    height: 2em;
+    width: 25em;
+    transition: 0.4s;
+}
+
+.main-link:hover::before {
+    right: -1em;
+}
+
+

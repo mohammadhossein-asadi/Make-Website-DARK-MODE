@@ -1,5 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+/* Theme color variables */
 
+:root {
+    --accent: #fe662a;
+    --primary: #2b3138;
+    --secoundary: #202329;
+    --text-primary: #fff;
+    --text-secoundary: #ccc;
+    --text-bg: #252932;
+}
 
+.light-theme {
+    --accent: #fe8c2c;
+    --primary: #ffffff;
+    --secoundary: #eff1f3;
+    --text-primary: #0f161d;
+    --text-secoundary: #a5a8aa;
+    --text-bg: #eee;
+}
+
+/* 
+
+This will be a mobile first design,
+meaning we start of from small screens 
+and add media queries for the larger ones
+
+*/
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+p {
+    font-size: 0.7em;
+    color: var(--text-secoundary);
+    max-width: 25em;
+    line-height: 21px;
+}
+
+header {
+    min-width: 100vh;
+    background: linear-gradient(
+        90deg,
+        var(--secoundary) 0%,
+        var(--secoundary) 50%,
+        var(--primary) 50%,
+        var(--primary) 100%
+    );
+}
 
